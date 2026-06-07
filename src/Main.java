@@ -1,7 +1,7 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
-    public static void main(String[] args)
+    public static void main(String[] args) {
 
         {
             int a = 30000000;
@@ -56,36 +56,42 @@ public class Main {
         }
 
         {
-            int bottlePerformance2Min = 16;
+            byte bottlePerformance2Min = 16;
             int bottlePerformance1Min = bottlePerformance2Min / 2;
-
-            int bottles20Minut = bottlePerformance1Min * 20;
-            System.out.println("За 20 минут машина произвела " + bottles20Minut + " штук бутылок");
+            int bottles20Minutes = bottlePerformance1Min * 20;
+            int minutesPerDay = 24 * 60;
+            int bottlesPerDay = minutesPerDay * bottlePerformance1Min;
+            int bottles3Days = bottlesPerDay * 3;
+            int bottlesMonth = bottlesPerDay * 30;
+            System.out.println("За 20 минут машина произвела " + bottles20Minutes + " штук бутылок");
+            System.out.println("За сутки машина произвела " + bottlesPerDay + " штук бутылок");
+            System.out.println("За 3 дня машина произвела " + bottles3Days + " штук бутылок");
+            System.out.println("За 1 месяц машина произвела " + bottlesMonth + " штук бутылок");
         }
         {
             byte totalCans = 120;
-            byte whiteСans = 2;
-            byte brownСans = 4;
-            int cansClass = (whiteСans + brownСans);
+            byte whiteCans = 2;
+            byte brownCans = 4;
+            int cansClass = (whiteCans + brownCans);
             int numberClasses = (totalCans / cansClass);
-            int totalWhiteCans = (numberClasses * whiteСans);
-            int totalBrownCans = (numberClasses * brownСans);
+            int totalWhiteCans = (numberClasses * whiteCans);
+            int totalBrownCans = (numberClasses * brownCans);
             System.out.println("В школе, где " + numberClasses + " классов, нужно " + totalWhiteCans + " банок белой краски и " + totalBrownCans + " банок коричневой краски");
         }
         {
-            short banana = 5;
+            byte bananaCount = 5;
             short bananaWeight = 80;
             short milk = 200;
             short milkWeight = 105;
             short iceCream = 2;
-            short iceСreamWeight = 100;
+            short iceCreamWeight = 100;
             short egg = 4;
             short eggWeight = 70;
-            int bananaTotalWeight = banana * bananaWeight;
+            int bananaTotalWeight = bananaCount * bananaWeight;
             int milkTotalWeight = milk * milkWeight;
-            int iceСreamTotalWeight = iceCream * iceСreamWeight;
-            int eggTotalWeight = egg * eggWeight ;
-            double gramWeight = bananaTotalWeight + milkTotalWeight + iceСreamTotalWeight + eggTotalWeight;
+            int iceCreamTotalWeight = iceCream * iceCreamWeight;
+            int eggTotalWeight = egg * eggWeight;
+            double gramWeight = bananaTotalWeight + milkTotalWeight + iceCreamTotalWeight + eggTotalWeight;
             double weightKilograms = gramWeight / 1000;
             System.out.println("вес спортзавтрака в граммах  " + gramWeight + " , вес спортзавтрака в килограммах " + weightKilograms);
         }
@@ -105,22 +111,22 @@ public class Main {
             int denisSalary = 83690;
             int kristinaSalary = 76230;
             float indexing = 0.10f;
-            double indexingMashas = (mashasSalary * indexing) + mashasSalary;
-            double indexingDenis = (denisSalary * indexing) + denisSalary;
-            double indexingKristina = (kristinaSalary * indexing) + kristinaSalary;
-            int annualIncomeMasha = mashasSalary * 12;
-            int annualIncomeDenis = denisSalary * 12;
-            int annualIncomeKristina = kristinaSalary * 12;
-            double newAnnualIncomeMasha = indexingMashas * 12;
-            double newAnnualIncomeDenis = indexingDenis * 12;
-            double newAnnualIncomeKristina = indexingKristina * 12;
-            double incomeDifferenceMasha = newAnnualIncomeMasha - annualIncomeMasha;
-            double incomeDifferenceDenis = newAnnualIncomeDenis - annualIncomeDenis;
-            double incomeDifferenceKristina = newAnnualIncomeKristina - annualIncomeKristina;
 
-            System.out.println( " Маша теперь получает " + indexingMashas + " рублей. Годовой доход вырос на " + incomeDifferenceMasha + " рублей");
-            System.out.println( " Денис теперь получает " + indexingDenis + " рублей. Годовой доход вырос на " + incomeDifferenceDenis + " рублей");
-            System.out.println( " Кристина теперь получает " + indexingKristina + " рублей. Годовой доход вырос на " + incomeDifferenceKristina + " рублей");
-        }
+            double newMashasSalary = mashasSalary * (1 + indexing);
+            double annualIncreaseMasha = mashasSalary * indexing * 12;
+            System.out.println("Маша теперь получает " + (int)newMashasSalary + " рублей. Годовой доход вырос на " + (int)annualIncreaseMasha + " рублей ");
+
+            double newDenisSalary = denisSalary * (1 + indexing);
+            double annualIncreaseDenis = denisSalary * indexing * 12;
+            System.out.println("Денис теперь получает " + (int)newDenisSalary + " рублей. Годовой доход вырос на " + (int)annualIncreaseDenis + " рублей ");
+
+            double newKristinaSalary = kristinaSalary * (1 + indexing);
+            double annualIncreaseKristina = kristinaSalary * indexing * 12;
+            System.out.println("Кристина теперь получает " + (int)newKristinaSalary + " рублей. Годовой доход вырос на " + (int)annualIncreaseKristina + " рублей");
+                }
+            }
 
         }
+
+
+
